@@ -1,8 +1,11 @@
 [build]
-  publish = "src/"  # Ensure Netlify serves index.html from src/
-  command = ""  # No build command needed for pure HTML & Tailwind
+  publish = "src"  # Directory where Netlify will look for files to deploy
+  command = "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"  # Tailwind build command
+
+[build.environment]
+  NODE_VERSION = "18"  # Ensure Node.js version compatibility
 
 [[redirects]]
-  from = "/public/*"
-  to = "/public/:splat"
+  from = "/*"
+  to = "/index.html"
   status = 200
