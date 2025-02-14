@@ -841,6 +841,10 @@ video {
   max-width: 32rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1244,6 +1248,10 @@ video {
 .text-\[\#0C2340\] {
   --tw-text-opacity: 1;
   color: rgb(12 35 64 / var(--tw-text-opacity, 1));
+}
+
+.\*\:flex-1 > * {
+  flex: 1 1 0%;
 }
 
 .hover\:cursor-pointer:hover {
