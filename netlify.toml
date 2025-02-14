@@ -1,0 +1,8 @@
+[build]
+  publish = "src/"  # Ensure Netlify serves index.html from src/
+  command = ""  # No build command needed for pure HTML & Tailwind
+
+[[redirects]]
+  from = "/public/*"
+  to = "/public/:splat"
+  status = 200
